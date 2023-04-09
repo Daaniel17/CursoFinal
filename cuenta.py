@@ -14,7 +14,7 @@ class Cliente(Persona):
     
 
     def __str__(self):
-        return f"Nombre: {self.nombre} {self.apellido} Numero de cuenta: {self.numero_cuenta} Balance: {self.balance}"
+        return f"\nCliente: {self.nombre} {self.apellido}\nNumero de cuenta: {self.numero_cuenta}\nBalance: {self.balance}"
 
     def deposito(self,cantidad_deposito):
         self.balance+=cantidad_deposito
@@ -34,3 +34,29 @@ def crear_cliente():
     cliente=Cliente(nombre_cliente,apellido_cliente,numero_cuenta)
     return cliente
 
+def inicio():
+    mi_cliente=crear_cliente()
+    print(mi_cliente)
+
+    opcion=0
+
+    while opcion != 3:
+        
+        print("\n(1)= Depositar")
+        print("(2)= Retirar")
+        print("(3)=Salir")
+        print()
+        opcion=int(input("Elija una opcion: "))
+
+        if opcion==1:
+            monto=int(input("Monto a depositar: "))
+            mi_cliente.deposito(monto)
+
+        elif opcion==2:
+            monto_r=int(input("Monto a retirar: "))
+            mi_cliente.retirar(monto_r)
+        print(mi_cliente)
+
+    print("Gracias por contar con nuestros servicios")
+
+inicio()
