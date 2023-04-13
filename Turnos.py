@@ -14,5 +14,23 @@ def menu():
         else:
             break
 
+    numeros.decorador(opcion)
+
+
+def inicio():
+
+    while True:
+        menu()
+        try:
+            otro_turno = input("Quieres sacar otro turno? [S] [N]: ").upper()
+            ["S", "N"].index(otro_turno)
+        except ValueError:
+            print("Esa noes una opción válida")
+        else:
+            if otro_turno == "N":
+                print("Gracias por su visita")
+                break
+
+inicio()
 
 
