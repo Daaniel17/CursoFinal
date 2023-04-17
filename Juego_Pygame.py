@@ -51,12 +51,12 @@ bala_visible = False
 
 # puntaje
 puntaje = 0
-fuente = pygame.font.Font('fastest.ttf', 32)
+fuente = pygame.font.Font('freesansbold.ttf', 32)
 texto_x = 10
 texto_y = 10
 
 # texto final de juego
-fuente_final = pygame.font.Font('fastest.ttf', 40)
+fuente_final = pygame.font.Font('freesansbold.ttf', 40)
 
 
 def texto_final():
